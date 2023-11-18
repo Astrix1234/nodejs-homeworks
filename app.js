@@ -1,6 +1,11 @@
 import express from "express";
 import cors from "cors";
+import passport from "passport";
+
 import router from "./routes/api/contacts.js";
+import routerUsers from "./routes/api/users.js";
+
+import "./config/config-passport.js";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -11,13 +16,16 @@ app.use(express.json());
 
 app.use(cors());
 
+app.use(passport.initialize());
+
 app.use("/api", router);
+app.use("/api", routerUsers);
 
 app.use((_, res, __) => {
   res.status(404).json({
     status: "error",
     code: 404,
-    message: "Use api on routes: /api/contacts",
+    message: "Not found",
     data: "Not found",
   });
 });
