@@ -61,10 +61,10 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
 #### Users:
 
 - POST /api/users/signup - registers a new user.
-  - <a href="https://monosnap.com/file/1cMD7OWZBlx46CX1sW6CZW1xUteQr5" target="_blank">Screenshot: User Registration in Postman<a>
-  - <a href="https://monosnap.com/file/e5xb3TNzccKEZRq1iu4XA7y3ADoGSb" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/v5tXXSmOK98pqdd9BwsHfxpR1eYwmi" target="_blank">Screenshot: User Registration in Postman<a>
+  - <a href="https://monosnap.com/file/n2Rm8iBlBDhOi403jW7ghMrdVTfljx" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
 - POST /api/users/login - logs in a user.
-  - <a href="https://monosnap.com/file/xYao0STYVuBX0eop8KSgaIG3bMi6BS" target="_blank">Screenshot: User Login in Postman<a>
+  - <a href="https://monosnap.com/file/1QearrUEnnz8tTMYbPgq9fX4LEPWEi" target="_blank">Screenshot: User Login in Postman<a>
 - PATCH /api/users - updates a user's subscription.
   - <a href="https://monosnap.com/file/myoa3cc0fGcin36sHwUmPjsAFukLa5" target="_blank">Screenshot: Updating User Subscription in Postman<a>
   - <a href="https://monosnap.com/file/wfsKw7MML0kyf9mWeD5487UqYX8bDE" target="_blank">Screenshot: Updating User Subscription - Users Collection in MongoDB Compass<a>
