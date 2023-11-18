@@ -39,24 +39,24 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
 
 #### Contacts:
 
-GET /api/contacts - retrieves a list of contacts.
-<a href="https://monosnap.com/file/1cMD7OWZBlx46CX1sW6CZW1xUteQr5" target="_blank">Screenshot: Displaying the Entire Contact List in Postman<a>
-<a href="https://monosnap.com/file/e5xb3TNzccKEZRq1iu4XA7y3ADoGSb" target="_blank">Screenshot: Displaying the Contact List with Pagination in Postman<a>
-<a href="https://monosnap.com/file/KFwgj0Bw6HmFvTsu9Sk62JuWzWangJ" target="_blank">Screenshot: Displaying the Favorite Contacts List with the 'favorite=true' Query in Postman<a>
-GET /api/contacts/:id - retrieves a specific contact by ID.
-<a href="" target="_blank">Screenshot: Displaying a Specific Contact in Postman<a>
-POST /api/contacts - creates a new contact.
-<a href="" target="_blank">Screenshot: Creating a New Contact in Postman<a>
-<a href="" target="_blank">Screenshot: Creating a New Contact - Contacts Collection in MongoDB Compass<a>
-PUT /api/contacts/:id - updates a contact by ID.
-<a href="" target="_blank">Screenshot: Updating a Contact in Postman<a>
-<a href="" target="_blank">Screenshot: Updating a Contact - Contacts Collection in MongoDB Compass<a>
-DELETE /api/contacts/:id - deletes a contact by ID.
-<a href="" target="_blank">Screenshot: Deleting a Contact in Postman<a>
-<a href="" target="_blank">Screenshot: Deleting a Contact - Contacts Collection in MongoDB Compass<a>
-PATCH /api/contacts/:id/favorite - marks a contact as a favorite.
-<a href="" target="_blank">Screenshot: Marking a Contact as Favorite in Postman<a>
-<a href="" target="_blank">Screenshot: Marking a Contact as Favorite - Contacts Collection in MongoDB Compass<a>
+- GET /api/contacts - retrieves a list of contacts.
+  - <a href="https://monosnap.com/file/1cMD7OWZBlx46CX1sW6CZW1xUteQr5" target="_blank">Screenshot: Displaying the Entire Contact List in Postman<a>
+  - <a href="https://monosnap.com/file/e5xb3TNzccKEZRq1iu4XA7y3ADoGSb" target="_blank">Screenshot: Displaying the Contact List with Pagination in Postman<a>
+  - <a href="https://monosnap.com/file/KFwgj0Bw6HmFvTsu9Sk62JuWzWangJ" target="_blank">Screenshot: Displaying the Favorite Contacts List with the 'favorite=true' Query in Postman<a>
+- GET /api/contacts/:id - retrieves a specific contact by ID.
+  <a href="" target="_blank">Screenshot: Displaying a Specific Contact in Postman<a>
+- POST /api/contacts - creates a new contact.
+  <a href="" target="_blank">Screenshot: Creating a New Contact in Postman<a>
+  <a href="" target="_blank">Screenshot: Creating a New Contact - Contacts Collection in MongoDB Compass<a>
+- PUT /api/contacts/:id - updates a contact by ID.
+  <a href="" target="_blank">Screenshot: Updating a Contact in Postman<a>
+  <a href="" target="_blank">Screenshot: Updating a Contact - Contacts Collection in MongoDB Compass<a>
+- DELETE /api/contacts/:id - deletes a contact by ID.
+  <a href="" target="_blank">Screenshot: Deleting a Contact in Postman<a>
+  <a href="" target="_blank">Screenshot: Deleting a Contact - Contacts Collection in MongoDB Compass<a>
+- PATCH /api/contacts/:id/favorite - marks a contact as a favorite.
+  <a href="" target="_blank">Screenshot: Marking a Contact as Favorite in Postman<a>
+  <a href="" target="_blank">Screenshot: Marking a Contact as Favorite - Contacts Collection in MongoDB Compass<a>
 
 #### Users:
 
