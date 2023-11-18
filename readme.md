@@ -44,19 +44,19 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
   - <a href="https://monosnap.com/file/e5xb3TNzccKEZRq1iu4XA7y3ADoGSb" target="_blank">Screenshot: Displaying the Contact List with Pagination in Postman<a>
   - <a href="https://monosnap.com/file/KFwgj0Bw6HmFvTsu9Sk62JuWzWangJ" target="_blank">Screenshot: Displaying the Favorite Contacts List with the 'favorite=true' Query in Postman<a>
 - GET /api/contacts/:id - retrieves a specific contact by ID.
-  - <a href="" target="_blank">Screenshot: Displaying a Specific Contact in Postman<a>
+  - <a href="https://monosnap.com/file/JLrxLrmYmmdTH5pWHqWc9A7mBquSi7" target="_blank">Screenshot: Displaying a Specific Contact in Postman<a>
 - POST /api/contacts - creates a new contact.
-  - <a href="" target="_blank">Screenshot: Creating a New Contact in Postman<a>
-- <a href="" target="_blank">Screenshot: Creating a New Contact - Contacts Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/xLpZjOyepXgIPYuyTYJ9wBOD03c2ay" target="_blank">Screenshot: Creating a New Contact in Postman<a>
+  - <a href="https://monosnap.com/file/Qr7eHi472ixWvjMplxCFMQhyjXVPn7" target="_blank">Screenshot: Creating a New Contact - Contacts Collection in MongoDB Compass<a>
 - PUT /api/contacts/:id - updates a contact by ID.
-  - <a href="" target="_blank">Screenshot: Updating a Contact in Postman<a>
-  - <a href="" target="_blank">Screenshot: Updating a Contact - Contacts Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/RtmUTw1p7FG8lywxV1LCxtzsG6euUT" target="_blank">Screenshot: Updating a Contact in Postman<a>
+  - <a href="https://monosnap.com/file/hm0VQWktr4DgS32wLPRjtQJaSnUJMN" target="_blank">Screenshot: Updating a Contact - Contacts Collection in MongoDB Compass<a>
 - DELETE /api/contacts/:id - deletes a contact by ID.
-  - <a href="" target="_blank">Screenshot: Deleting a Contact in Postman<a>
-  - <a href="" target="_blank">Screenshot: Deleting a Contact - Contacts Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/YX1LuZlGbl9E7uqzpRhTuna4UVVIHf" target="_blank">Screenshot: Deleting a Contact in Postman<a>
+  - <a href="https://monosnap.com/file/isc5OuWsLgLeYJSPsikqn6IursD4bJ" target="_blank">Screenshot: Deleting a Contact - Contacts Collection in MongoDB Compass<a>
 - PATCH /api/contacts/:id/favorite - marks a contact as a favorite.
-  - <a href="" target="_blank">Screenshot: Marking a Contact as Favorite in Postman<a>
-  - <a href="" target="_blank">Screenshot: Marking a Contact as Favorite - Contacts Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/TwtFjXXhuYrEkR2uSy8GjDQJ2HPgXG" target="_blank">Screenshot: Marking a Contact as Favorite in Postman<a>
+  - <a href="https://monosnap.com/file/jzSMwlXcKsadGUJJUNdKXO4XDRVb2F" target="_blank">Screenshot: Marking a Contact as Favorite - Contacts Collection in MongoDB Compass<a>
 
 #### Users:
 
