@@ -1,20 +1,16 @@
 import express from "express";
 
-import { get } from "../../controller/ctrlContacts/getContacts.js";
-
-import { getById } from "../../controller/ctrlContacts/getContactById.js";
-
-import { create } from "../../controller/ctrlContacts/createContact.js";
-
-import { update } from "../../controller/ctrlContacts/updateContact.js";
-
-import { remove } from "../../controller/ctrlContacts/removeContact.js";
-
-import { updateStatus } from "../../controller/ctrlContacts/updateContactFavorite.js";
+import { get } from "#ctrlContacts/getContacts.js";
+import { getById } from "#ctrlContacts/getContactById.js";
+import { create } from "#ctrlContacts/createContact.js";
+import { update } from "#ctrlContacts/updateContact.js";
+import { remove } from "#ctrlContacts/removeContact.js";
+import { updateStatus } from "#ctrlContacts/updateContactFavorite.js";
+import { validateContactQuery } from "#validators/contactQueryValidator.js";
 
 const router = express.Router();
 
-router.get("/contacts", get);
+router.get("/contacts", validateContactQuery, get);
 
 router.get("/contacts/:id", getById);
 

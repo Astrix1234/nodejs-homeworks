@@ -1,4 +1,4 @@
-import userService from "../../service/userService.js";
+import userService from "#service/userService.js";
 
 export const getCurrentUser = async (req, res, next) => {
   if (!req.user || !req.user._id) {

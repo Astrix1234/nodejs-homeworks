@@ -1,21 +1,19 @@
 import express from "express";
 import passport from "passport";
 
-import { register } from "../../controller/ctrlUser/registerUser.js";
-
-import { login } from "../../controller/ctrlUser/loginUser.js";
-
-import { updateUserSubscription } from "../../controller/ctrlUser/updateUserSubscription.js";
-
-import { logout } from "../../controller/ctrlUser/logoutUser.js";
-
-import { getCurrentUser } from "../../controller/ctrlUser/getCurrentUser.js";
+import { register } from "#ctrlUser/registerUser.js";
+import { login } from "#ctrlUser/loginUser.js";
+import { updateUserSubscription } from "#ctrlUser/updateUserSubscription.js";
+import { logout } from "#ctrlUser/logoutUser.js";
+import { getCurrentUser } from "#ctrlUser/getCurrentUser.js";
+import { uploadAvatar, updateUserAvatar } from "#ctrlUser/updateUserAvatar.js";
+import { validateUserQuery } from "#validators/userQueryValidator.js";
 
 const routerUsers = express.Router();
 
-routerUsers.post("/users/signup", register);
+routerUsers.post("/users/signup", validateUserQuery, register);
 
-routerUsers.post("/users/login", login);
+routerUsers.post("/users/login", validateUserQuery, login);
 
 routerUsers.patch(
   "/users",
@@ -33,6 +31,13 @@ routerUsers.get(
   "/users/current",
   passport.authenticate("jwt", { session: false }),
   getCurrentUser
+);
+
+routerUsers.patch(
+  "/users/avatars",
+  passport.authenticate("jwt", { session: false }),
+  uploadAvatar,
+  updateUserAvatar
 );
 
 export default routerUsers;

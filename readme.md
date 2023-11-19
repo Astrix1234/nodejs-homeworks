@@ -61,8 +61,8 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
 #### Users:
 
 - POST /api/users/signup - registers a new user.
-  - <a href="https://monosnap.com/file/v5tXXSmOK98pqdd9BwsHfxpR1eYwmi" target="_blank">Screenshot: User Registration in Postman<a>
-  - <a href="https://monosnap.com/file/n2Rm8iBlBDhOi403jW7ghMrdVTfljx" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/cRugdj4wbYvlX809yRgvXEdoV75bDF" target="_blank">Screenshot: User Registration in Postman<a>
+  - <a href="https://monosnap.com/file/lO6pf5BNMCbjcPagILtI5oeckAdKbe" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
 - POST /api/users/login - logs in a user.
   - <a href="https://monosnap.com/file/1QearrUEnnz8tTMYbPgq9fX4LEPWEi" target="_blank">Screenshot: User Login in Postman<a>
 - PATCH /api/users - updates a user's subscription.
@@ -72,3 +72,6 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
   - <a href="https://monosnap.com/file/wzx7ReQLMecv0PcVfw8LRyKPxx2kIW" target="_blank">Screenshot: User Logout in Postman<a>
 - GET /api/users/current - retrieves data of the currently logged-in user.
   - <a href="https://monosnap.com/file/DzhUArzRvQAk65ZdsxilbJC0lcdhst" target="_blank">Screenshot: Displaying the Current User in Postman<a>
+- PATCH /api/users/avatars - updates a user's avatar.
+  - <a href="https://monosnap.com/file/nB2cRb7BpTqF0S3pG9Lqulqsp2NWtb" target="_blank">Screenshot: Updating User Avatar in Postman<a>
+  - <a href="https://monosnap.com/file/e8mAwkXi4IOyfr5BXPJY7kDsB3AFMF" target="_blank">Screenshot: Updated User Avatar - Users Collection in MongoDB Compass<a>
