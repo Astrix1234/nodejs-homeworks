@@ -1,19 +1,8 @@
-import userService from "../../service/userService.js";
-import Joi from "joi";
+import userService from "#service/userService.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export const login = async (req, res, next) => {
-  const schema = Joi.object({
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-  });
-
-  const { error } = schema.validate(req.body);
-  if (error) {
-    return res.status(400).json({ message: error.details[0].message });
-  }
-
   try {
     const { email, password } = req.body;
     const user = await userService.validateUser(email, password);

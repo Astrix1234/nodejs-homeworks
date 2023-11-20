@@ -1,18 +1,7 @@
-import userService from "../../service/userService.js";
-import Joi from "joi";
+import userService from "#service/userService.js";
 import bcrypt from "bcryptjs";
 
 export const register = async (req, res, next) => {
-  const schema = Joi.object({
-    email: Joi.string().email().required(),
-    password: Joi.string().min(6).required(),
-  });
-
-  const { error } = schema.validate(req.body);
-  if (error) {
-    return res.status(400).json({ message: error.details[0].message });
-  }
-
   const { email, password } = req.body;
   try {
     const existingUser = await userService.findUserByEmail(email);
@@ -26,9 +15,13 @@ export const register = async (req, res, next) => {
       password: hashedPassword,
     });
 
-    res
-      .status(201)
-      .json({ user: { email: user.email, subscription: user.subscription } });
+    res.status(201).json({
+      user: {
+        email: user.email,
+        subscription: user.subscription,
+        avatarURL: user.avatarURL,
+      },
+    });
   } catch (error) {
     console.error(error);
     next(error);

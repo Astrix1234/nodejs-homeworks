@@ -1,4 +1,4 @@
-import userService from "../../service/userService.js";
+import userService from "#service/userService.js";
 import Joi from "joi";
 
 export const updateUserSubscription = async (req, res, next) => {
