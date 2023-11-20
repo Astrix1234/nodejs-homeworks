@@ -1,7 +1,9 @@
 import User from "./schemas/user.js";
+import sendVerificationEmail from "#config/config-nodemailer.js";
 
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
+import { nanoid } from "nanoid";
 
 const registerUser = async (userData) => {
   const gravatarHash = crypto
@@ -10,12 +12,47 @@ const registerUser = async (userData) => {
     .digest("hex");
   const gravatarUrl = `https://www.gravatar.com/avatar/${gravatarHash}?d=identicon`;
 
+  const verificationToken = nanoid();
+  console.log("Generated verification token:", verificationToken);
+
   const newUser = new User({
     ...userData,
     avatarURL: gravatarUrl,
+    verificationToken,
+    verify: false,
   });
 
-  return newUser.save();
+  try {
+    await newUser.save();
+  } catch (error) {
+    console.error("Error saving user:", error);
+    throw error;
+  }
+
+  await sendVerificationEmail(newUser);
+
+  return newUser;
+};
+
+const verifyUser = async (verificationToken) => {
+  const user = await User.findOne({ verificationToken });
+  if (!user) {
+    return null;
+  }
+  user.verificationToken = null;
+  user.verify = true;
+  await user.save();
+  return user;
+};
+
+const resendVerificationEmail = async (email) => {
+  const user = await User.findOne({ email, verify: false });
+  if (!user) {
+    return null;
+  }
+
+  await sendVerificationEmail(user);
+  return user;
 };
 
 const findUserByEmail = async (email) => {
@@ -57,6 +94,8 @@ const updateAvatar = async (userId, avatarURL) => {
 
 export default {
   registerUser,
+  verifyUser,
+  resendVerificationEmail,
   findUserByEmail,
   validateUser,
   updateSubscription,

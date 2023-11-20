@@ -61,8 +61,11 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
 #### Users:
 
 - POST /api/users/signup - registers a new user.
-  - <a href="https://monosnap.com/file/cRugdj4wbYvlX809yRgvXEdoV75bDF" target="_blank">Screenshot: User Registration in Postman<a>
-  - <a href="https://monosnap.com/file/lO6pf5BNMCbjcPagILtI5oeckAdKbe" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/FaSK5Q9tNLeFVjo5AJYVA7JMZA0W9a" target="_blank">Screenshot: User Registration in Postman<a>
+  - <a href="https://monosnap.com/file/KW8SpaQIAJTZZZrji3lFFIV146czuC" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+- GET /api/users/verify/:verificationToken - verifies a user's email.
+  - <a href="https://monosnap.com/file/Bhy6SEW7hmmIsBxMjo5MNov1afCCQm" target="_blank">Screenshot showing the verification email received by the user with the verification link<a>
+  - <a href="https://monosnap.com/file/iIZuvuS6nwGMDPl1ryMV6V5cZPp4Z7" target="_blank">Screenshot showing the response from the localhost server for email verification in a browser using the verification token<a>
 - POST /api/users/login - logs in a user.
   - <a href="https://monosnap.com/file/1QearrUEnnz8tTMYbPgq9fX4LEPWEi" target="_blank">Screenshot: User Login in Postman<a>
 - PATCH /api/users - updates a user's subscription.
