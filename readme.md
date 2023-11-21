@@ -30,6 +30,7 @@ Contactify also provides an API for managing user profiles, enabling users to up
 - Node.js with Express.js for the backend, providing a robust framework for building efficient and scalable server-side applications.
 - Mongoose for MongoDB interaction, facilitating object data modeling and database interaction in an asynchronous environment.
 - Passport.js for authentication and JWT (JSON Web Tokens) handling, offering a flexible and modular approach to handling user authentication and secure token generation.
+- Nodemailer for handling email operations, crucial for features like sending verification emails during user registration. This adds a layer of security and user verification to the application.
 - CORS (Cross-Origin Resource Sharing) enabled, ensuring the API can securely handle requests from different domain origins.
 - Dotenv for managing environment variables, allowing easy configuration of the application in different environments without code changes.
 - Docker, with a custom Dockerfile created for the application, enabling easy deployment and environment consistency by containerizing the application. This facilitates smoother development, testing, and production workflows.
