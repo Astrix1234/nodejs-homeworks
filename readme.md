@@ -18,9 +18,12 @@ Contactify also provides an API for managing user profiles, enabling users to up
 ### User Management:
 
 - User registration and login.
+- Email verification during registration, requiring users to click a verification link sent to their email address to activate their account.
 - Update user subscription data.
 - User logout.
 - Retrieve data of the currently logged-in user.
+- Assigning an initial avatar to each user upon registration, with the option for users to update their avatar later.
+- Capability for users to manage and update their own profiles, including personal information and avatar changes.
 
 ## Technologies
 
