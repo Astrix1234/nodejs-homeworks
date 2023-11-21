@@ -1,6 +1,12 @@
 # Contactify - Contact Management API
 
-Contactify is a modern REST API designed for managing contacts and user handling. The application allows for managing a contact list, including adding, updating, deleting, and marking favorite contacts. Additionally, Contactify supports user registration, login, logout, and user subscription data update processes.
+Contactify is a modern REST API designed for managing contacts and user handling. The application enables management of a contact list, including adding, updating, deleting, and marking favorite contacts. Additionally, Contactify supports user registration, login, logout, and updating user subscription data.
+
+Each registered user is assigned an avatar, which can subsequently be changed by the user at their discretion. This feature allows users to have a more personalized interaction with the application.
+
+The registration process in Contactify includes email verification, providing additional security and confirming the user's identity. Upon registering, users receive an email with a verification link that they must click to activate their account. This verification system ensures that each account is properly linked to a valid email address, enhancing the credibility and security of using Contactify.
+
+Contactify also provides an API for managing user profiles, enabling users to update their personal information and subscription preferences.
 
 ## Features
 
@@ -30,7 +36,7 @@ To run the project locally, follow these steps:
 
 - Clone the repository to your device.
 - Install dependencies using npm install.
-- Create a .env file in the main project directory and configure environment variables (PORT, DB_HOST, SECRET).
+- Create a .env file in the main project directory and configure environment variables (PORT, DB_HOST, SECRET, SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, API_KEY, BACKEND_URL).
 - Start the local server using npm start.
 
 ## API Usage
