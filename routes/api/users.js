@@ -2,6 +2,8 @@ import express from "express";
 import passport from "passport";
 
 import { register } from "#ctrlUser/registerUser.js";
+import { verifyUser } from "#ctrlUser/verifyUser.js";
+import { resendVerificationEmail } from "#ctrlUser/resendVerificationEmail.js";
 import { login } from "#ctrlUser/loginUser.js";
 import { updateUserSubscription } from "#ctrlUser/updateUserSubscription.js";
 import { logout } from "#ctrlUser/logoutUser.js";
@@ -12,6 +14,10 @@ import { validateUserQuery } from "#validators/userQueryValidator.js";
 const routerUsers = express.Router();
 
 routerUsers.post("/users/signup", validateUserQuery, register);
+
+routerUsers.get("/users/verify/:verificationToken", verifyUser);
+
+routerUsers.post("/users/verify", resendVerificationEmail);
 
 routerUsers.post("/users/login", validateUserQuery, login);
 

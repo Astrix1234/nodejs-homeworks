@@ -1,6 +1,12 @@
 # Contactify - Contact Management API
 
-Contactify is a modern REST API designed for managing contacts and user handling. The application allows for managing a contact list, including adding, updating, deleting, and marking favorite contacts. Additionally, Contactify supports user registration, login, logout, and user subscription data update processes.
+Contactify is a modern REST API designed for managing contacts and user handling. The application enables management of a contact list, including adding, updating, deleting, and marking favorite contacts. Additionally, Contactify supports user registration, login, logout, and updating user subscription data.
+
+Each registered user is assigned an avatar, which can subsequently be changed by the user at their discretion. This feature allows users to have a more personalized interaction with the application.
+
+The registration process in Contactify includes email verification, providing additional security and confirming the user's identity. Upon registering, users receive an email with a verification link that they must click to activate their account. This verification system ensures that each account is properly linked to a valid email address, enhancing the credibility and security of using Contactify.
+
+Contactify also provides an API for managing user profiles, enabling users to update their personal information and subscription preferences.
 
 ## Features
 
@@ -12,17 +18,22 @@ Contactify is a modern REST API designed for managing contacts and user handling
 ### User Management:
 
 - User registration and login.
+- Email verification during registration, requiring users to click a verification link sent to their email address to activate their account.
 - Update user subscription data.
 - User logout.
 - Retrieve data of the currently logged-in user.
+- Assigning an initial avatar to each user upon registration, with the option for users to update their avatar later.
+- Capability for users to manage and update their own profiles, including personal information and avatar changes.
 
 ## Technologies
 
-- Node.js with Express.js for the backend.
-- Mongoose for MongoDB interaction.
-- Passport.js for authentication and JWT (JSON Web Tokens) handling.
-- CORS for Cross-Origin Resource Sharing.
-- Dotenv for managing environment variables.
+- Node.js with Express.js for the backend, providing a robust framework for building efficient and scalable server-side applications.
+- Mongoose for MongoDB interaction, facilitating object data modeling and database interaction in an asynchronous environment.
+- Passport.js for authentication and JWT (JSON Web Tokens) handling, offering a flexible and modular approach to handling user authentication and secure token generation.
+- Nodemailer for handling email operations, crucial for features like sending verification emails during user registration. This adds a layer of security and user verification to the application.
+- CORS (Cross-Origin Resource Sharing) enabled, ensuring the API can securely handle requests from different domain origins.
+- Dotenv for managing environment variables, allowing easy configuration of the application in different environments without code changes.
+- Docker, with a custom Dockerfile created for the application, enabling easy deployment and environment consistency by containerizing the application. This facilitates smoother development, testing, and production workflows.
 
 ## Installation
 
@@ -30,7 +41,7 @@ To run the project locally, follow these steps:
 
 - Clone the repository to your device.
 - Install dependencies using npm install.
-- Create a .env file in the main project directory and configure environment variables (PORT, DB_HOST, SECRET).
+- Create a .env file in the main project directory and configure environment variables (PORT, DB_HOST, SECRET, SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, API_KEY, BACKEND_URL).
 - Start the local server using npm start.
 
 ## API Usage
@@ -61,8 +72,11 @@ Once the server is running, the API is available at http://localhost:[PORT]/api/
 #### Users:
 
 - POST /api/users/signup - registers a new user.
-  - <a href="https://monosnap.com/file/cRugdj4wbYvlX809yRgvXEdoV75bDF" target="_blank">Screenshot: User Registration in Postman<a>
-  - <a href="https://monosnap.com/file/lO6pf5BNMCbjcPagILtI5oeckAdKbe" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+  - <a href="https://monosnap.com/file/FaSK5Q9tNLeFVjo5AJYVA7JMZA0W9a" target="_blank">Screenshot: User Registration in Postman<a>
+  - <a href="https://monosnap.com/file/KW8SpaQIAJTZZZrji3lFFIV146czuC" target="_blank">Screenshot: User Registration - Users Collection in MongoDB Compass<a>
+- GET /api/users/verify/:verificationToken - verifies a user's email.
+  - <a href="https://monosnap.com/file/Bhy6SEW7hmmIsBxMjo5MNov1afCCQm" target="_blank">Screenshot showing the verification email received by the user with the verification link<a>
+  - <a href="https://monosnap.com/file/iIZuvuS6nwGMDPl1ryMV6V5cZPp4Z7" target="_blank">Screenshot showing the response from the localhost server for email verification in a browser using the verification token<a>
 - POST /api/users/login - logs in a user.
   - <a href="https://monosnap.com/file/1QearrUEnnz8tTMYbPgq9fX4LEPWEi" target="_blank">Screenshot: User Login in Postman<a>
 - PATCH /api/users - updates a user's subscription.
