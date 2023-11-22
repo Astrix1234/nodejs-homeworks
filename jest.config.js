@@ -1,6 +1,5 @@
 export default {
-  transform: {
-    "^.+\\.js$": "babel-jest",
-  },
+  preset: "ts-jest",
+  testEnvironment: "node",
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
 };

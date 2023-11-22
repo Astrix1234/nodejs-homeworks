@@ -27,7 +27,8 @@
     "nanoid": "^5.0.3",
     "nodemailer": "^6.9.7",
     "passport": "^0.6.0",
-    "passport-jwt": "^4.0.1"
+    "passport-jwt": "^4.0.1",
+    "ts-jest": "^29.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
